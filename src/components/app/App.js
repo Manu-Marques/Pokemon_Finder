@@ -1,13 +1,15 @@
 import './App.css';
+import React from 'react';
+import Header from '../header';
+import Footer from '../footer';
+import Main from '../main';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-       <h1 className="text-4xl font-bold underline">
-      Hello world!
-    </h1>
+      <Header/>
+      <Main/>
+      <Footer/>
     </div>
   );
 }
-
-export default App;
