@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         'current-link': '#375eab',
-        'links':  '#17285e',
+        'bluekemon':  '#17285e',
       },
     },
   },
