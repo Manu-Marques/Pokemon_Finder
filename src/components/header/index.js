@@ -24,9 +24,8 @@ export default function Header() {
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a href="#" class="flex items-center">
       <img src={logo} alt="logo" class='max-w-xs h-auto'  />
-        {/* <span class="italic self-center text-4xl font-semibold whitespace-nowrap dark:text-white">Pokemon Finder</span> */}
     </a>
-    <button onClick={toggleMenu} data-collapse-toggle="navbar-hamburger" type="button" class="transition-all duration-500 inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-50 dark:hover:bg-yellow-400 dark:focus:ring-gray-900" aria-controls="navbar-hamburger" aria-expanded="false">
+    <button onClick={toggleMenu} data-collapse-toggle="navbar-hamburger" type="button" class="transition-all duration-500 inline-flex items-center p-3 ml-3 text-sm text-gray-500 rounded-lg focus:outline-none  border-2 dark:border-gray-900 dark:text-gray-50 dark:hover:bg-yellow-400 " aria-controls="navbar-hamburger" aria-expanded="false">
       <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
     </button>
     <div class="hidden w-full" id="navbar-hamburger">
