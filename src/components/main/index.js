@@ -16,23 +16,21 @@ export default function Main() {
 </form>
         {/* end search */}
         {/* start card */}
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 inline-block align-middle">
         <img class="rounded-t-lg" src={pikachu} alt="" />
-    </a>
     <div class="p-5">
         <a href="#">
             <h5 class="mb-2 font-normal font-bold tracking-tight text-gray-900 underline dark:text-white">Pikachu</h5>
         </a>
         <ul class="space-y-1 text-xs list-none list-inside text-gray-500 dark:text-gray-400">
     <li>
-        Color : Jaune
+    <span class="text-base font-bold text-red-700">Color</span> : Jaune
     </li>
     <li>
-        Type : Electrique
+    <span class="text-base font-bold text-red-700">Type</span> : Electrique
     </li>
     <li>
-        Attaque : Lightning-rod
+    <span class="text-base font-bold text-red-700">Attaque</span> : Lightning-rod
     </li>
 </ul>
         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
