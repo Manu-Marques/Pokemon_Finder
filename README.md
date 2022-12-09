@@ -1,9 +1,13 @@
--Pokemon Finder-
-La stack utilisée pour ce project :
+# -Pokemon Finder-
+
+## La stack utilisée pour ce project :
+
+```
  -HTML
  -Tailwind CSS
  -JAVASCRIPT
  -REACT
+ ```
 
-Appel a une database en consomant une api.
+Appel à une database en consomant une api.
 
