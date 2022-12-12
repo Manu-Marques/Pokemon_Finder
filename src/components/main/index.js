@@ -2,7 +2,7 @@ import pikachu from "../../../src/assets/pikachu.jpeg";
 
 export default function Main() {
     return (
-        <div className="dark:bg-green-900 h-full w- text-center text-4xl font-bold ">
+        <div className="dark:bg-green-900 h-fit text-center text-4xl font-bold ">
          {/* start search */}
         <form>   
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Recherche</label>
