@@ -4,6 +4,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height: {
+        'footer' : '152px',
+      },
+      spacing: {
+        'space' : '600px',
+      },
       colors: {
         'current-link': '#375eab',
         'bluekemon':  '#17285e',

@@ -2,19 +2,19 @@ import './App.css';
 import React from 'react';
 import Header from '../header';
 import Footer from '../footer';
-import Main from '../main';
-import detailsCard from '../detailsCard';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from '../home';
+import DetailsCard from '../detailsCard';
+import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
   return (
     <div className="App">
       <Header/>
-      <Main/>
-      <Footer/>
       <Routes>
-        <Route path="/details-card" element={<detailsCard/>}/>
+          <Route path="/" element={<Home/>} />
+          <Route path="/details-card" element={<DetailsCard />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
