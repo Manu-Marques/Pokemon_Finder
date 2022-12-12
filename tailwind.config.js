@@ -5,7 +5,10 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        'footer' : '250px',
+        'footer' : '152px',
+      },
+      spacing: {
+        'space' : '600px',
       },
       colors: {
         'current-link': '#375eab',
