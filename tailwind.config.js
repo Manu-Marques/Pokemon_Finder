@@ -8,7 +8,7 @@ module.exports = {
         'footer' : '152px',
       },
       spacing: {
-        'space' : '600px',
+        'space' : '650px',
       },
       colors: {
         'current-link': '#375eab',
