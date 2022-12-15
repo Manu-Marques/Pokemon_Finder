@@ -4,6 +4,10 @@ import Header from '../header';
 import Footer from '../footer';
 import Home from '../home';
 import DetailsCard from '../detailsCard';
+import VideoGames from '../videoGames';
+import PokemonList from '../pokemonList';
+import PokemonRandom from '../pokemonRandom';
+
 import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -13,8 +17,12 @@ export default function App() {
       <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/details-card" element={<DetailsCard />} />
+          <Route path="/details-card/:id" element={<DetailsCard />} />
+
+          <Route path="/liste-pokemons" element={<PokemonList />} />
+          <Route path="/pokemon-hasard" element={<PokemonRandom />} />
+          <Route path="/jeux-videos" element={<VideoGames />} />
       </Routes>
-      <Footer/>
     </div>
   );
 }
