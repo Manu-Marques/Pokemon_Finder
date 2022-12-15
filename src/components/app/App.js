@@ -4,7 +4,7 @@ import Header from '../header';
 import Footer from '../footer';
 import Home from '../home';
 import DetailsCard from '../detailsCard';
-import VideoGames from '../VideoGames';
+import VideoGames from '../videoGames';
 import PokemonList from '../pokemonList';
 import PokemonRandom from '../pokemonRandom';
 
