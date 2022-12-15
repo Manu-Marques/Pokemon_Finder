@@ -32,9 +32,6 @@ export default function Header() {
     <div class="hidden w-full" id="navbar-hamburger">
       <ul class="flex-col mt-4 rounded-lg bg-gray-50 dark:bg-bluekemon dark:border-gray-700">
         <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded dark:current-link" aria-current="page">Accueil</a>
-        </li>
-        <li>
           <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white">Liste de Pokemons</a>
         </li>
         <li>
