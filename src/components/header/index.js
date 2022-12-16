@@ -29,8 +29,8 @@ export default function Header() {
     <button onClick={toggleMenu} data-collapse-toggle="navbar-hamburger" type="button" class="transition-all duration-500 inline-flex items-center p-3 ml-3 text-sm text-gray-500 rounded-lg focus:outline-none  border-2 dark:border-gray-900 dark:text-gray-50 dark:hover:bg-yellow-400 " aria-controls="navbar-hamburger" aria-expanded="false">
       <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
     </button>
-    <div class="hidden w-full" id="navbar-hamburger">
-      <ul class="flex-col mt-4 rounded-lg bg-gray-50 dark:bg-bluekemon dark:border-gray-700">
+    <div class="pt-1 pb-1 hidden w-full" id="navbar-hamburger">
+      <ul class="flex-col rounded-lg bg-gray-50 dark:bg-bluekemon dark:border-gray-700">
         <li>
           <Link onClick={()=> setOpen(false)} to="liste-pokemons" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white">Liste de Pokemons</Link>
         </li>
