@@ -23,7 +23,7 @@ export default function Header() {
 
 <nav class="p-3 border-gray-200  bg-gray-50 dark:bg-red-700 dark:border-gray-700">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
-    <Link to="/" class="flex items-center">
+    <Link onClick={()=> setOpen(false)} to="/" class="flex items-center">
       <img src={logo} alt="logo" class='pb-3 max-w-xs h-auto'  />
     </Link>
     <button onClick={toggleMenu} data-collapse-toggle="navbar-hamburger" type="button" class="transition-all duration-500 inline-flex items-center p-3 ml-3 text-sm text-gray-500 rounded-lg focus:outline-none  border-2 dark:border-gray-900 dark:text-gray-50 dark:hover:bg-yellow-400 " aria-controls="navbar-hamburger" aria-expanded="false">
@@ -32,13 +32,13 @@ export default function Header() {
     <div class="hidden w-full" id="navbar-hamburger">
       <ul class="flex-col mt-4 rounded-lg bg-gray-50 dark:bg-bluekemon dark:border-gray-700">
         <li>
-          <Link to="liste-pokemons" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white">Liste de Pokemons</Link>
+          <Link onClick={()=> setOpen(false)} to="liste-pokemons" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white">Liste de Pokemons</Link>
         </li>
         <li>
-          <Link to="pokemon-hasard" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-zinc-900 dark:hover:text-white">Pokemon au hasard</Link>
+          <Link onClick={()=> setOpen(false)} to="pokemon-hasard" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-zinc-900 dark:hover:text-white">Pokemon au hasard</Link>
         </li>
         <li>
-          <Link to="jeux-videos" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white">Jeux videos</Link>
+          <Link onClick={()=> setOpen(false)} to="jeux-videos" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white">Jeux videos</Link>
         </li>
       </ul>
     </div>
