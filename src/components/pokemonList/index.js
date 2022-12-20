@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import evoli from "../../../src/assets/evoli.jpg";
 
 export default function PokemonList({pokemon}) {
+  console.log(pokemon);
     return (
       <div class="flex flex-wrap">
       {pokemon.map((poke) => {

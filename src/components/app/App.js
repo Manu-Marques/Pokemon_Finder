@@ -15,24 +15,23 @@ import axios from 'axios';
 export default function App() {
 
   const [pokemonData, setPokemonData] = useState([])
-  const [loading, setLoading] = useState(true)
   const [pokedex, setPokedex] = useState([])
-  const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon')
+  const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151')
 
   const pok = async () => {
     const res = await axios.get(pokedexUrl)
     getPokemon(res.data.results)
-    setLoading(false)
   }
 
   const getPokemon = async (res) => {
     res.map(async (item) => {
-      const res = await axios.get(item.url)
+      console.log(item.url)
+      const result = await axios.get(item.url)
       setPokemonData(state => {
-        state = [...state, res.data]
-        state.sort((a, b) => a.id>b.id?1:-1)
-        return state
-      })
+      state = [...state, result.data]
+      state.sort((a, b) => a.id>b.id?1:-1)
+      return state
+     })
     })
   }
 
