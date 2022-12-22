@@ -25,7 +25,6 @@ export default function App() {
 
   const getPokemon = async (res) => {
     res.map(async (item) => {
-      console.log(item.url)
       const result = await axios.get(item.url)
       setPokemonData(state => {
       state = [...state, result.data]
@@ -46,10 +45,10 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/details-card" element={<DetailsCard />} />
-          <Route path="/details-card/:id" element={<DetailsCard />} />
+          <Route path="/details-card" element={<DetailsCard pokemon={pokemonData}  infoPokemon={poke => setPokedex(poke)} />} />
+          <Route path="/details-card/:id" element={<DetailsCard infoPokemon={poke =>setPokedex(poke) }  />} />
 
-          <Route path="/liste-pokemons" element={<PokemonList pokemon={pokemonData} infoPokemon={poke =>setPokedex(poke) } />} />
+          <Route path="/liste-pokemons" element={<PokemonList pokemon={pokemonData} />} />
           <Route path="/pokemon-hasard" element={<PokemonRandom />} />
           <Route path="/jeux-videos" element={<VideoGames />} />
         </Routes>
