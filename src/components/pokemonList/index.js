@@ -4,7 +4,6 @@ export default function PokemonList({pokemon}) {
     return (
       <div class="flex flex-wrap">
       {pokemon.map((poke) => {
-        console.log(poke.id);
         return (
             <figure key={poke.id} class="max-w-lg">
               <Link to={`/details-card/${poke.name}`}>

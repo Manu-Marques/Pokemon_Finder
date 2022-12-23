@@ -3,11 +3,10 @@ import { useParams } from "react-router-dom";
 export default function DetailsCard({pokemon}) {
 
   const { id } = useParams();
-  const poke = pokemon?.filter((poke) => poke.name === id);
+  const poke = pokemon.filter((pokes) => pokes.name === id);
 
+  console.log(pokemon);
 
-
-  console.log(id);
     return (
       <div className="pt-4 flex flex-col items-center justify-center w-full h-full">
       {poke?.map((poke) => {
@@ -24,11 +23,11 @@ export default function DetailsCard({pokemon}) {
     </tr>
     <tr>
       <td class="text-gray-50 dark:bg-bluekemon text-center border border-slate-700 ...">Type</td>
-      <td class="text-center border border-slate-700 ...">{poke.types.type.name}</td>
+      <td class="text-center border border-slate-700 ...">{poke.type}</td>
     </tr>
     <tr>
       <td class="text-gray-50 dark:bg-bluekemon text-center border border-slate-700 ...">Poids</td>
-      <td class="text-center border border-slate-700 ...">60kg</td>
+      <td class="text-center border border-slate-700 ...">{poke.weight}kg</td>
     </tr>
   </tbody>
 </table>

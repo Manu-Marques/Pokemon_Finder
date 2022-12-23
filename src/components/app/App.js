@@ -16,21 +16,21 @@ export default function App() {
 
   const [pokemonData, setPokemonData] = useState([])
   const [pokedex, setPokedex] = useState([])
-  const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151')
+  const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon')
 
   const pok = async () => {
     const res = await axios.get(pokedexUrl)
     getPokemon(res.data.results)
   }
-
+  
   const getPokemon = async (res) => {
     res.map(async (item) => {
       const result = await axios.get(item.url)
       setPokemonData(state => {
-      state = [...state, result.data]
-      state.sort((a, b) => a.id>b.id?1:-1)
-      return state
-     })
+        state = [...state,result.data]
+        state.sort((a, b) => a.id>b.id?1:-1)
+        return state
+      })
     })
   }
 
@@ -38,15 +38,12 @@ export default function App() {
     pok()
   }, [pokedexUrl])
 
-
-
   return (
       <div className="App">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/details-card" element={<DetailsCard pokemon={pokemonData}  infoPokemon={poke => setPokedex(poke)} />} />
-          <Route path="/details-card/:id" element={<DetailsCard infoPokemon={poke =>setPokedex(poke) }  />} />
+          <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemonData} />} />
 
           <Route path="/liste-pokemons" element={<PokemonList pokemon={pokemonData} />} />
           <Route path="/pokemon-hasard" element={<PokemonRandom />} />
