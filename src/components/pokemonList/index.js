@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function PokemonList({pokemon}) {
+  // console.log(pokemon);
     return (
       <div class="flex flex-wrap">
       {pokemon.map((poke) => {

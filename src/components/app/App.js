@@ -17,10 +17,22 @@ export default function App() {
   const [pokemonData, setPokemonData] = useState([])
   const [pokedex, setPokedex] = useState([])
   const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151')
+  // const [pokemonVamos, setPokemonVamos] = useState('https://pokebuildapi.fr/api/v1/pokemon')
+
+
+// const test = async () => {
+//   const res = await axios.get(pokemonVamos)
+//   setPokemonVamos(res.data)
+// }
+
+//   useEffect(() => {
+//     test()
+//   }, [pokemonVamos])
 
   const pok = async () => {
     const res = await axios.get(pokedexUrl)
     getPokemon(res.data.results)
+    console.log(res.data.results);
   }
   
   const getPokemon = async (res) => {
