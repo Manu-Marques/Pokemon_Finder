@@ -12,7 +12,7 @@ export default function DetailsCard({pokemon}) {
       {poke?.map((poke) => {
         return (
           <div key={poke.id}>
-<img class="border-4 md:max-w-lg h-auto rounded-lg" src={poke.sprites.front_default}alt="evoli"/>
+<img class="border-4 w-96 rounded-lg" src={poke.sprites.front_default}alt="evoli"/>
 <table class="h-96 w-80 sm:w-96  border-separate border border-slate-500 ...">
   <thead>
   </thead>
@@ -23,7 +23,12 @@ export default function DetailsCard({pokemon}) {
     </tr>
     <tr>
       <td class="text-gray-50 dark:bg-bluekemon text-center border border-slate-700 ...">Type</td>
-      <td class="text-center border border-slate-700 ...">{poke.type}</td>
+       { poke.types.map((type) => {
+        return (
+          <td class="text-center border border-slate-700 ...">{type.type.name}</td>
+        )
+      }
+      )}
     </tr>
     <tr>
       <td class="text-gray-50 dark:bg-bluekemon text-center border border-slate-700 ...">Poids</td>

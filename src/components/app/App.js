@@ -16,7 +16,7 @@ export default function App() {
 
   const [pokemonData, setPokemonData] = useState([])
   const [pokedex, setPokedex] = useState([])
-  const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon')
+  const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151')
 
   const pok = async () => {
     const res = await axios.get(pokedexUrl)
