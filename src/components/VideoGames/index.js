@@ -1,7 +1,15 @@
-export default function VideoGames() {
+export default function VideoGames(pokemon) {
     return (
         <div>
-            <h1>Jeux Vidéos</h1>
+            {/* {pokemon?.map((poke) => {
+                return (
+                    <div key={poke.id}>
+                        <img src={poke.image} alt="pokemon" />
+                        <p>{poke.name}</p>
+                    </div>
+                )
+            })
+            } */}
         </div>
     )
 }
