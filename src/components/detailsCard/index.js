@@ -5,8 +5,6 @@ export default function DetailsCard({pokemon}) {
   const { id } = useParams();
   const poke = pokemon.filter((pokes) => pokes.name === id);
 
-  console.log(pokemon);
-
     return (
       <div className="pt-4 flex flex-col items-center justify-center w-full h-full">
       {poke?.map((poke) => {
