@@ -1,16 +1,23 @@
 import { Link } from "react-router-dom";
 
 export default function PokemonList({ pokemon }) {
+    console.log(pokemon)
     return (
-        <div class="flex flex-wrap">
+        <div  class="grid grid-cols-7 gap-5">
             {pokemon.map((poke) => {
                 return (
-                    <figure key={poke.id} class="max-w-lg">
-                        <Link to={`/details-card/${poke.name}`}>
-                            <img src={poke.image} alt="pokemon" />
-                        </Link>
-                        <figcaption class="mt-2 text-2xl text-center text-gray-500 dark:text-gray-900">{poke.name}</figcaption>
-                    </figure>
+                    <div key={poke.id} className="pt-4 pr-2 pl-2 pb-2 dark:bg-grey-50 text-center text-4xl font-bold ">
+                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 inline-block align-middle">
+                            <div class="p-5">
+                                <Link to={`/details-card/${poke.name}`}>
+                                    <img class="rounded-t-lg" src={poke.image} alt="" />
+                                </Link>
+                                <h5 class="mb-2 font-normal font-bold tracking-tight text-gray-900 underline dark:text-white">{poke.name}</h5>
+                                <ul class="space-y-1 text-xs list-none list-inside text-gray-500 dark:text-gray-400">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 )
             })
             }
