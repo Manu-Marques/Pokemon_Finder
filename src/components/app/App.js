@@ -14,11 +14,8 @@ import axios from 'axios';
 
 export default function App() {
 
-  const [pokemonData, setPokemonData] = useState([])
-  const [pokedex, setPokedex] = useState([])
-  const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151')
-  const [pokemonVamos, setPokemonVamos] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/151')
-
+  const [pokeDex, setPokedex] = useState([])
+  const [pokemonVamos, setPokemonVamos] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/20')
 
    const test = async () => {
      const res = await axios.get(pokemonVamos)
@@ -27,7 +24,10 @@ export default function App() {
 
   const getPokemonVamos = async (res) => {
   res.map(async (item) => {
-    console.log(item);
+     setPokedex(state => {
+       state = [...state, item]
+       return state
+     })
    })
   }
 
@@ -35,39 +35,16 @@ export default function App() {
   test()
   }, [pokemonVamos])
 
-  const pok = async () => {
-    const res = await axios.get(pokedexUrl)
-    getPokemon(res.data.results)
-    console.log(res.data.results);
-  }
-
-
-
-  const getPokemon = async (res) => {
-    res.map(async (item) => {
-      const result = await axios.get(item.url)
-      setPokemonData(state => {
-        state = [...state, result.data]
-        state.sort((a, b) => a.id > b.id ? 1 : -1)
-        return state
-      })
-    })
-  }
-
-  useEffect(() => {
-    pok()
-  }, [pokedexUrl])
-
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemonData} />} />
+        <Route path="/details-card/:id" element={<DetailsCard pokemon={pokeDex} />} />
 
-        <Route path="/liste-pokemons" element={<PokemonList pokemon={pokemonData} />} />
+        <Route path="/liste-pokemons" element={<PokemonList pokemon={pokeDex} />} />
         <Route path="/pokemon-hasard" element={<PokemonRandom />} />
-        <Route path="/jeux-videos" element={<VideoGames pokemon={pokemonVamos} />} />
+        <Route path="/jeux-videos" element={<VideoGames pokemon={pokeDex} />} />
       </Routes>
     </div>
   );
