@@ -15,7 +15,7 @@ import axios from 'axios';
 export default function App() {
 
   const [pokemon, setPokePokemon] = useState([])
-  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/20')
+  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon')
 
    const test = async () => {
      const res = await axios.get(pokeData)
