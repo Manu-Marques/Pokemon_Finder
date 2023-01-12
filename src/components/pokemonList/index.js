@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function PokemonList({ pokemon }) {
     console.log(pokemon)
     return (
-        <div  class="grid grid-cols-7 gap-5">
+        <div  class="grid grid-auto-fit gap-8">
             {pokemon.map((poke) => {
                 return (
                     <div key={poke.id} className="pt-4 pr-2 pl-2 pb-2 dark:bg-grey-50 text-center text-4xl font-bold ">
