@@ -34,11 +34,7 @@ export default function Header({ pokemon }) {
     }
   };
 
-  console.log(searchPokemon)
-
-
   return (
-
     <nav className="p-3 border-gray-200  bg-gray-50 dark:bg-red-700 dark:border-gray-700">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link onClick={() => setOpen(false)} to="/" className="flex items-center">

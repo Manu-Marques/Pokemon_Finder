@@ -29,14 +29,14 @@ export default function DetailsCard({ pokemon }) {
                   }
                   )}
                 </tr>
+                <tr>
                 <td className="h-20 text-gray-50 dark:bg-bluekemon text-center border border-slate-600 ...">Stats</td>
-                <tr className="grid grid-auto-fit border border-slate-700 ...">
-                  <td className="text-center ">{poke.stats.HP} points de vie</td>
-                  <td className="text-center "> {poke.stats.attack} attaque</td>
-                  <td className="text-center ">{poke.stats.defense} défense</td>
-                  <td className="text-center ">{poke.stats.special_attack} spécial attaque</td>
-                  <td className="text-center ">{poke.stats.special_defense} spécial défense</td>
-                  <td className="text-center ">{poke.stats.speed} vitesse</td>
+                  <td className="grid grid-auto-fit border-t-2 border-x-2 border-slate-700 text-center ">{poke.stats.HP} points de vie</td>
+                  <td className="grid grid-auto-fit border-x-2 border-slate-700 text-center "> {poke.stats.attack} attaque</td>
+                  <td className="grid grid-auto-fit border-x-2 border-slate-700 text-center ">{poke.stats.defense} défense</td>
+                  <td className="grid grid-auto-fit border-x-2 border-slate-700 text-center ">{poke.stats.special_attack} spécial attaque</td>
+                  <td className="grid grid-auto-fit border-x-2 border-slate-700 text-center ">{poke.stats.special_defense} spécial défense</td>
+                  <td className="grid grid-auto-fit border-b-2 border-x-2 border-slate-700 text-center ">{poke.stats.speed} vitesse</td>
                 </tr>
               </tbody>
             </table>
