@@ -15,29 +15,29 @@ import axios from 'axios';
 export default function App() {
 
   const [pokemon, setPokePokemon] = useState([])
-  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon')
+  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/20')
 
-   const test = async () => {
-     const res = await axios.get(pokeData)
-      getPokemon(res.data)
+  const test = async () => {
+    const res = await axios.get(pokeData)
+    getPokemon(res.data)
   }
 
   const getPokemon = async (res) => {
-  res.map(async (item) => {
-    setPokePokemon(state => {
-       state = [...state, item]
-       return state
-     })
-   })
+    res.map(async (item) => {
+      setPokePokemon(state => {
+        state = [...state, item]
+        return state
+      })
+    })
   }
 
-   useEffect(() => {
-  test()
+  useEffect(() => {
+    test()
   }, [pokeData])
 
   return (
     <div className="App">
-      <Header />
+      <Header pokemon={pokemon} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemon} />} />
