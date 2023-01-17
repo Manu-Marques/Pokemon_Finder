@@ -1,18 +1,20 @@
 import './App.css';
 import React from 'react';
 import Header from '../header';
-import Footer from '../footer';
 import Home from '../home';
 import DetailsCard from '../detailsCard';
-import VideoGames from '../videoGames';
 import PokemonList from '../pokemonList';
 import PokemonRandom from '../pokemonRandom';
+import VideoGames from '../videoGames';
+import Input from '../inputs';
+import ScrollToTop from '../ScrollToTop';
 
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function App() {
+
 
   const [pokemon, setPokePokemon] = useState([])
   const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/20')
@@ -38,6 +40,7 @@ export default function App() {
   return (
     <div className="App">
       <Header pokemon={pokemon} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemon} />} />
