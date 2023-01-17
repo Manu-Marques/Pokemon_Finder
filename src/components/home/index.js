@@ -3,7 +3,6 @@ import evoli from "../../../src/assets/evoli.jpg";
 import dracaufeu from "../../../src/assets/dracaufeu.png";
 
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css'
 
