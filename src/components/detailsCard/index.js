@@ -23,7 +23,7 @@ export default function DetailsCard({ pokemon }) {
                   {poke.apiTypes.map((type, i) => {
                     return (
                       <td key={i} className="grid place-content-center justify-items-center border border-slate-500 border-slate-700 ...">{type.name}
-                        <img className="w-10" src={type.image} />
+                        <img className="w-10" src={type.image} alt="pokemon" />
                       </td>
                     )
                   }
