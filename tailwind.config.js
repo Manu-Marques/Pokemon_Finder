@@ -4,8 +4,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      height: {
-        'footer' : '152px',
+      width: {
+        'search' : '700px',
       },
       spacing: {
         'space' : '650px',
