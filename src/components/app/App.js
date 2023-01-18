@@ -6,7 +6,6 @@ import DetailsCard from '../detailsCard';
 import PokemonList from '../pokemonList';
 import PokemonRandom from '../pokemonRandom';
 import VideoGames from '../videoGames';
-import Input from '../inputs';
 import ScrollToTop from '../ScrollToTop';
 
 import { Routes, Route } from 'react-router-dom';

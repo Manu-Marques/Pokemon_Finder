@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Input from "../inputs";
 
 
 export default function PokemonList({ pokemon }) {
