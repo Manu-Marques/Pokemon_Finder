@@ -6,7 +6,6 @@ import DetailsCard from '../detailsCard';
 import PokemonList from '../pokemonList';
 import PokemonRandom from '../pokemonRandom';
 import VideoGames from '../videoGames';
-import Input from '../inputs';
 import ScrollToTop from '../ScrollToTop';
 
 import { Routes, Route } from 'react-router-dom';
@@ -17,7 +16,9 @@ export default function App() {
 
 
   const [pokemon, setPokePokemon] = useState([])
-  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/20')
+      // eslint-disable-next-line
+  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon')
+  
 
   const getAllPokemons = async () => {
     const res = await axios.get(pokeData)
@@ -35,6 +36,7 @@ export default function App() {
 
   useEffect(() => {
     getAllPokemons()
+    // eslint-disable-next-line
   }, [pokeData])
 
   return (
