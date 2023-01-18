@@ -6,7 +6,7 @@ import Input from "../inputs";
 export default function PokemonList({ pokemon }) {
   const [searchPokemon, setSearchPokemon] = useState('');
   const [filterResults, setFilterResults] = useState([]);
-  // const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
   const searchPokemonName = (searchValue) => {
     setSearchPokemon(searchValue)
@@ -21,21 +21,34 @@ export default function PokemonList({ pokemon }) {
     }
   };
 
-  // const handleUserInput = (e) => {
-  //   setInputValue(e.target.value);
-  // };
 
-  
+  const handleUserInput = (e) => {
+    setInputValue(e.target.value);
+  };
+
+
+  const resetInputField = (e) => {
+    setInputValue("pokemon");
+  };
+
+  function fusionFonction (e){
+    searchPokemonName(e.target.value);
+    handleUserInput(e);
+  };
+
+
 
   return (
     <div>
+      <form>
       <div className="relative">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </div>
-        <input onChange={(e) => searchPokemonName(e.target.value)} id="search" className=" w-full p-4 pl-10 text-xl text-gray-900 border border-4 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-70 dark:border-red-700 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Pikachu, Dracaufeu ..." required />
-        <button className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Effacer</button>
+        <input value={inputValue} onChange={fusionFonction} id="search" className=" w-full p-4 pl-10 text-xl text-gray-900 border border-4 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-70 dark:border-red-700 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Pikachu, Dracaufeu ..." required />
+        <button onClick={resetInputField} className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Effacer</button>
       </div>
+      </form>
       <div className="grid grid-auto-fit gap-8">
         {searchPokemon.length > 1 ? (
           filterResults.map((poke) => {

@@ -12,6 +12,7 @@ export default function Input() {
     // Reset Input Field handler
     const resetInputField = () => {
       setInputValue("");
+      console.log(resetInputField, ' la valeur est :', inputValue);
     };
   
     return (
