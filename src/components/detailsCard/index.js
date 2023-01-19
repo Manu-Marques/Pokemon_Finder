@@ -7,7 +7,7 @@ export default function DetailsCard({ pokemon }) {
   return (
     <div className="pt-4 md:pt-40">
 
-      <Link className="bg-red-700 text-gray-50" to={-1}>Retour</Link>
+      <Link className="w-28 bg-red-700 text-gray-50 flex" to={-1}>Retour</Link>
       {poke?.map((poke) => {
         return (
           <div className="flex flex-wrap justify-center" key={poke.id} >
