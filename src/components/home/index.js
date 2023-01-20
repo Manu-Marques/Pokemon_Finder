@@ -1,6 +1,7 @@
 import pikachu from "../../../src/assets/pikachu.jpeg";
 import evoli from "../../../src/assets/evoli.jpg";
 import dracaufeu from "../../../src/assets/dracaufeu.png";
+import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
@@ -16,6 +17,7 @@ export default function Home() {
         indicators: true,
         arrows: true,
     };
+
 
     return (
         <Slide {...properties}>
