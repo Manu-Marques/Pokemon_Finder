@@ -3,7 +3,6 @@ import React from 'react';
 import Header from '../header';
 import Home from '../home';
 import DetailsCard from '../detailsCard';
-import PokemonList from '../pokemonList';
 import PokemonRandom from '../pokemonRandom';
 import VideoGames from '../videoGames';
 import ScrollToTop from '../ScrollToTop';
@@ -44,10 +43,9 @@ export default function App() {
       <Header pokemon={pokemon} />
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home pokemon={pokemon}/>} />
         <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemon} />} />
 
-        <Route path="/liste-pokemons" element={<PokemonList pokemon={pokemon} />} />
         <Route path="/pokemon-hasard" element={<PokemonRandom />} />
         <Route path="/jeux-videos" element={<VideoGames pokemon={pokemon} />} />
       </Routes>
