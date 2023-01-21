@@ -3,8 +3,6 @@ import React from 'react';
 import Header from '../header';
 import Home from '../home';
 import DetailsCard from '../detailsCard';
-import PokemonRandom from '../pokemonRandom';
-import VideoGames from '../videoGames';
 import ScrollToTop from '../ScrollToTop';
 
 import { Routes, Route } from 'react-router-dom';
@@ -13,11 +11,9 @@ import axios from 'axios';
 
 export default function App() {
 
-
   const [pokemon, setPokePokemon] = useState([])
-      // eslint-disable-next-line
+  // eslint-disable-next-line
   const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/20')
-  
 
   const getAllPokemons = async () => {
     const res = await axios.get(pokeData)
@@ -40,14 +36,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <Header pokemon={pokemon} />
+      <Header />
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home pokemon={pokemon}/>} />
+        <Route path="/" element={<Home pokemon={pokemon} />} />
         <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemon} />} />
-
-        <Route path="/pokemon-hasard" element={<PokemonRandom />} />
-        <Route path="/jeux-videos" element={<VideoGames pokemon={pokemon} />} />
       </Routes>
     </div>
   );
