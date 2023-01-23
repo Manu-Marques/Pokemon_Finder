@@ -1,18 +1,21 @@
 import React from 'react'
 import Home from '../home'
+import App from '../App'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-/**
- * @jest-environment jsdom
- */
 
-// test('test 1 réussi', function () {
-//   render(<Home title="Hello World"></Home>)
-//   const title = screen.getByText('Hello World')
-//   expect(title).toBeInTheDocument()
-// })
+// Composant App
 
+
+
+
+
+
+
+
+
+// Composant Home
 test('test button effacer réussi',  () => {
   const handleClick = jest.fn()
   render(<Home  onClick={handleClick}>Effacer</Home>)
@@ -21,7 +24,7 @@ test('test button effacer réussi',  () => {
   expect(handleClick).toHaveBeenCalledTimes(1)
 })
 
-test('test input réussi',  () => {
+test('test input rechercher réussi',  () => {
   const handleOnChange = jest.fn()
   render(<Home  onChange={handleOnChange}></Home>)
   handleOnChange();
