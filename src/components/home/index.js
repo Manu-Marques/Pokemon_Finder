@@ -1,7 +1,9 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function PokemonList({ pokemon }) {
+
+export default function Home({ pokemon }) {
     const [searchPokemon, setSearchPokemon] = useState('');
     const [filterResults, setFilterResults] = useState([]);
     const [inputValue, setInputValue] = useState("");
@@ -36,6 +38,7 @@ export default function PokemonList({ pokemon }) {
     return (
         <div>
             {/* Start Search Bar */}
+            Hello World
             <form className="pt-2 pt-2 flex justify-center ">
                 <div className="relative">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -89,7 +92,7 @@ export default function PokemonList({ pokemon }) {
                         )
                     })
                 ) : (
-                    pokemon.map((poke) => {
+                    pokemon?.map((poke) => {
                         return (
                             //Start Display Pokemon whithout search
                             <div key={poke.id} className="pt-4 pr-2 pl-2 pb-2 dark:bg-grey-50 text-center text-4xl font-bold ">
