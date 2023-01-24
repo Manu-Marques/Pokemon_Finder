@@ -3,6 +3,7 @@ import Header from '../header';
 import Home from '../home';
 import DetailsCard from '../detailsCard';
 import ScrollToTop from '../ScrollToTop';
+import CallApi from '../callApi';
 
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -40,6 +41,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home pokemon={pokemon} />} />
         <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemon} />} />
+        <Route path="/api" element={<CallApi />} />
       </Routes>
     </div>
   );

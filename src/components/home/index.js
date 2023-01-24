@@ -7,6 +7,7 @@ export default function Home({ pokemon }) {
     const [filterResults, setFilterResults] = useState([]);
     const [inputValue, setInputValue] = useState("");
 
+
     const searchPokemonName = (searchValue) => {
         setSearchPokemon(searchValue)
         if (searchPokemon !== '') {

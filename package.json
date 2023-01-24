@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react-hooks": "^8.0.1",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
     "identity-obj-proxy": "^3.0.0",
@@ -50,6 +51,7 @@
     "babel-jest": "^29.3.1",
     "enzyme": "^3.11.0",
     "jest": "^27.5.1",
+    "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.19",
     "react-test-renderer": "^18.2.0",
     "tailwindcss": "^3.2.4"

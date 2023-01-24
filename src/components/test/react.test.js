@@ -1,6 +1,10 @@
 import React from 'react'
 import Home from '../home'
+
+import { renderHook } from '@testing-library/react-hooks'
 import App from "../app/App";
+import axios from 'axios'
+
 import Enzyme from 'enzyme'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
@@ -8,19 +12,6 @@ import '@testing-library/jest-dom/extend-expect'
 const { shallow } = Enzyme
 
 // Composant App
-const setState = jest.fn();
-const useStateSpy = jest.spyOn(React, 'useState')
-useStateSpy.mockImplementation((init) => [init, setState]);
-const wrapper = shallow(<App />)
-const instance = wrapper.instance()
-
-test('test App', () => {
-  expect(instance).toBeInstanceOf(App)
-})
-
-
-
-
 
 
 

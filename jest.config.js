@@ -10,5 +10,6 @@ module.exports = {
     ["node_modules/(?!axios)/"],
     moduleNameMapper: {
         '^axios$': require.resolve('axios'),
+        "\\.(jpg|jpeg|png)$": "identity-obj-proxy",
       },
 }
