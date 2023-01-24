@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-
 export default function Home({ pokemon }) {
     const [searchPokemon, setSearchPokemon] = useState('');
     const [filterResults, setFilterResults] = useState([]);

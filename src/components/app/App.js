@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import Header from '../header';
 import Home from '../home';
@@ -13,7 +12,7 @@ export default function App() {
 
   const [pokemon, setPokePokemon] = useState([])
   // eslint-disable-next-line
-  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon')
+  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon/limit/6')
 
   const getAllPokemons = async () => {
     const res = await axios.get(pokeData)
@@ -35,7 +34,7 @@ export default function App() {
   }, [pokeData])
 
   return (
-    <div className="App">
+    <div className="overflow-hidden dark:bg-gray-100">
       <Header />
       <ScrollToTop />
       <Routes>
