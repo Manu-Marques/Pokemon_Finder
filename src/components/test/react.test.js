@@ -1,17 +1,17 @@
 import React from 'react'
 import Home from '../home'
-import App from '../App'
+
+import { renderHook } from '@testing-library/react-hooks'
+import App from "../app/App";
+import axios from 'axios'
+
+import Enzyme from 'enzyme'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
+const { shallow } = Enzyme
 
 // Composant App
-
-
-
-
-
-
 
 
 
