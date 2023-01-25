@@ -18,11 +18,11 @@ export default function DetailsCard({ pokemon }) {
               </thead>
               <tbody>
                 <tr>
-                  <td className="w-96 text-gray-50 dark:bg-bluekemon text-center border border-slate-600">Nom</td>
+                  <td className="w-96 text-gray-50 dark:bg-blue-600 text-center border border-slate-600">Nom</td>
                   <td className="dark:bg-yellow-400 text-neutral-700 font-bold text-2xl h-20 text-center border border-slate-700">{poke.name} N°{poke.pokedexId}</td>
                 </tr>
                 <tr>
-                  <td className="text-gray-50 dark:bg-bluekemon text-center border border-slate-700">Type</td>
+                  <td className="text-gray-50 dark:bg-blue-600 text-center border border-slate-700">Type</td>
                   {poke.apiTypes.map((type, i) => {
                     return (
                       <td key={i} className="grid place-content-center justify-items-center border border-slate-500 border-slate-700">{type.name}
@@ -33,7 +33,7 @@ export default function DetailsCard({ pokemon }) {
                   )}
                 </tr>
                 <tr>
-                  <td className="h-20 text-gray-50 dark:bg-bluekemon text-center border border-slate-600">Stats</td>
+                  <td className="h-20 text-gray-50 dark:bg-blue-600 text-center border border-slate-600">Stats</td>
                   <td className="grid grid-auto-fit border-t-2 border-x-2 border-slate-700 text-center ">{poke.stats.HP} points de vie</td>
                   <td className="grid grid-auto-fit border-x-2 border-slate-700 text-center "> {poke.stats.attack} attaque</td>
                   <td className="grid grid-auto-fit border-x-2 border-slate-700 text-center ">{poke.stats.defense} défense</td>
