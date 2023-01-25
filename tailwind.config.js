@@ -11,7 +11,6 @@ module.exports = {
         'space' : '650px',
       },
       colors: {
-        'current-link': '#375eab',
         'bluekemon':  '#17285e',
       },
     },
