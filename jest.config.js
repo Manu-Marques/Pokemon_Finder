@@ -11,5 +11,6 @@ module.exports = {
     moduleNameMapper: {
         '^axios$': require.resolve('axios'),
         "\\.(jpg|jpeg|png)$": "identity-obj-proxy",
+        "\\.(png|svg|pdf|jpg|jpeg)$": "<rootDir>/path-to-fileMock.js",
       },
 }

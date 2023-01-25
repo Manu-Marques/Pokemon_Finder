@@ -1,19 +1,24 @@
 import React from 'react'
 import Home from '../home'
-
-import { renderHook } from '@testing-library/react-hooks'
-import App from "../app/App";
-import axios from 'axios'
-
-import Enzyme from 'enzyme'
+import GetPokemonData from '../callApi'
+import mockAxios from 'axios'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-const { shallow } = Enzyme
 
-// Composant App
+// Composant callApi
+jest.mock("axios");
+mockAxios.get.mockResolvedValue({ data: { name: "Pokedex" } });
 
+describe("pokemon data", () => {
+  afterEach(jest.clearAllMocks);
 
+  test("devrait retourner un nom", async () => {
+    const result = await GetPokemonData(1);
+    expect(result).toBe("Pokedex");
+    expect(mockAxios.get).toHaveBeenCalledTimes(1);
+  });
+});
 
 // Composant Home
 test('test button effacer réussi',  () => {
