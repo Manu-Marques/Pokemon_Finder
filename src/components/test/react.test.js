@@ -1,9 +1,10 @@
 import React from 'react'
 import Home from '../home'
+import GetPokemonData from '../callApi'
 
 import { renderHook } from '@testing-library/react-hooks'
-import App from "../app/App";
-import axios from 'axios'
+import Api from '../app/App'
+import mockAxios from 'axios'
 
 import Enzyme from 'enzyme'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -12,7 +13,18 @@ import '@testing-library/jest-dom/extend-expect'
 const { shallow } = Enzyme
 
 // Composant App
+jest.mock("axios");
+mockAxios.get.mockResolvedValue({ data: { name: "Mock Jedi" } });
 
+describe("swapiGetter", () => {
+  afterEach(jest.clearAllMocks);
+
+  test("should return a name", async () => {
+    const result = await GetPokemonData(1);
+    expect(result).toBe("Mock Jedi");
+    expect(mockAxios.get).toHaveBeenCalledTimes(1);
+  });
+});
 
 
 // Composant Home
