@@ -3,7 +3,7 @@ import Header from '../header';
 import Home from '../home';
 import DetailsCard from '../detailsCard';
 import ScrollToTop from '../ScrollToTop';
-import CallApi from '../callApi';
+import Loading from '../loading';
 
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -13,7 +13,6 @@ export default function App() {
 
   const [pokemon, setPokePokemon] = useState([])
   // eslint-disable-next-line
-  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon/')
 
   const getAllPokemons = async () => {
     const res = await axios.get(pokeData)
@@ -39,9 +38,8 @@ export default function App() {
       <Header />
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home pokemon={pokemon} />} />
+        <Route path="/" element={loading ? <Loading /> : <Home pokemon={pokemon} />} />
         <Route path="/details-card/:id" element={<DetailsCard pokemon={pokemon} />} />
-        <Route path="/api" element={<CallApi />} />
       </Routes>
     </div>
   );
