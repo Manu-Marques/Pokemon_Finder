@@ -2,13 +2,11 @@ import React from 'react'
 import Home from '../home'
 import GetPokemonData from '../callApi'
 import mockAxios from 'axios'
-import Enzyme from 'enzyme'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-const { shallow } = Enzyme
 
-// Composant App
+// Composant callApi
 jest.mock("axios");
 mockAxios.get.mockResolvedValue({ data: { name: "Pokedex" } });
 
