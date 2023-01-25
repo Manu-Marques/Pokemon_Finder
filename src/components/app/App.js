@@ -35,7 +35,7 @@ export default function App() {
   }, [pokeData])
 
   return (
-    <div className="overflow-hidden dark:bg-gray-100">
+    <div className="overflow-hidden">
       <Header />
       <ScrollToTop />
       <Routes>

@@ -19,7 +19,7 @@ export default function DetailsCard({ pokemon }) {
               <tbody>
                 <tr>
                   <td className="w-96 text-gray-50 dark:bg-blue-600 text-center border border-slate-600">Nom</td>
-                  <td className="dark:bg-yellow-400 text-neutral-700 font-bold text-2xl h-20 text-center border border-slate-700">{poke.name} N°{poke.pokedexId}</td>
+                  <td className="bg-yellow-400 text-neutral-700 font-bold text-2xl h-20 text-center border border-slate-700">{poke.name} N°{poke.pokedexId}</td>
                 </tr>
                 <tr>
                   <td className="text-gray-50 dark:bg-blue-600 text-center border border-slate-700">Type</td>
