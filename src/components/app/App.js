@@ -13,16 +13,6 @@ export default function App() {
 
   const [pokemon, setPokePokemon] = useState([])
   // eslint-disable-next-line
-  const [pokeData, setPokemonData] = useState('https://pokebuildapi.fr/api/v1/pokemon')
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-  }, [])
-
 
   const getAllPokemons = async () => {
     const res = await axios.get(pokeData)
