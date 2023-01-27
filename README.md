@@ -7,6 +7,7 @@
  -Tailwind CSS
  -JAVASCRIPT
  -REACT
+ -Test unitaire avec Jest
  ```
 
 Appel à une database en consomant une api.
